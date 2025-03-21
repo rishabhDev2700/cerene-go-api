@@ -18,7 +18,7 @@ import (
 func (s *FiberServer) RegisterFiberRoutes() {
 	s.App.Use(logger.New())
 	s.App.Use(cors.New(cors.Config{
-		AllowOrigins:     "*", // Allows requests from any domain
+		AllowOrigins:     "http://localhost:8081", // Allows requests from any domain
 		AllowMethods:     "GET,POST,PUT,DELETE,OPTIONS",
 		AllowHeaders:     "Origin, Content-Type, Accept, Authorization",
 		AllowCredentials: true,
